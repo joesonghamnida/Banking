@@ -19,58 +19,30 @@ public class Main {
 
                 String selection = Main.scanner.nextLine();
                 String[] acceptableInput = {"1", "2", "3", "4"};
-                boolean test = false;
-                while (test) {
-                    for (int i = 0; i < acceptableInput.length; i++) {
-                        System.out.println(i);
-                        if (selection == acceptableInput[i]) {
-                            test = true;
-                            break;
-                        }
-                        else {
-                            System.out.println("Please enter a valid input:");
-                        }
-                    }
-                }
 
-                if(selection.equalsIgnoreCase("1")){
-                    atm.checkBalance();
-                }
-                else if(selection.equalsIgnoreCase("2")){
-                    atm.withdrawMoney();
-                }
-                else if(selection.equalsIgnoreCase("3")){
-                    atm.removeAccount();
-                    cancel=false;
-                }
-                else if(selection.equalsIgnoreCase("4")){
-                    cancel = false;
-                }
-            }
-
-                /*switch (selection) {
-                    case "1": {
+                switch (selection) {
+                    case "1":
                         atm.checkBalance();
                         break;
-                    }
-                    case "2": {
+
+                    case "2":
                         atm.withdrawMoney();
-                        System.out.println("break 1");
                         break;
-                    }
-                    case "3": {
+
+                    case "3":
                         atm.removeAccount();
-                        cancel=false;
-                        System.out.println("break 2");
-                        break;
-                    }
-                    case "4": {
                         cancel = false;
-                        System.out.println("break 3");
                         break;
-                    }
+
+                    case "4":
+                        cancel = false;
+                        break;
+                    default:
+                        System.out.println("Please enter a valid input:");
+                        break;
+
                 }
-            }*/
+            }
 
             System.out.println("Thank you and please come again");
             System.out.println("---------");
